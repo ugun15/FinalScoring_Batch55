@@ -1,0 +1,29 @@
+* Tampilkan hasil dari query dan penjelasan sebagai berikut :
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id;
+
+    -> Menampilkan seluruh data dari table heroes beserta type dari hero tsb
+
+    ======================================================================================================
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE type_tb.name = 'Strength';
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE type_tb.name = 'HP';
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE type_tb.name = 'Agility';
+    
+    -> Menampilkan seluruh data heroes berdasarkan type tertentu 
+
+    ======================================================================================================
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE heroes_tb.name = 'Holy Knight Escanor';
+    
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE heroes_tb.id = 1;
+
+    -> Menampilkan spesifik data heroes dengan type nya

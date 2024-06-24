@@ -1,0 +1,56 @@
+* Tahapan-tahapan pembuatan DB menggunakan PostgreSQL dengan Sequelize : 
+    
+    1. Melakukan Install Sequelize dan dependencies  
+       -> npm install sequelize pg pg-hstore
+    
+    2. Setup Sequelize
+        - Inisialisasi Sequelize
+            -> npx sequelize-cli init
+
+        - Ini akan membuat beberapa folder di proyek : config, models, migrations, dan seeders.
+
+    3.  Konfigurasi database 
+        - Buka config/config.json dan atur konfigurasi untuk database dengan yang sesuai
+
+    4. Buat Model dan Migrasi
+        - Membuat model untuk type_tb
+            -> npx sequelize-cli model:generate --name Type --attributes name:string
+        
+        - Membuat model untuk heroes_tb
+            -> npx sequelize-cli model:generate --name Heroes --attributes name:string,type_id:integer,photo:string
+
+    5. Migrasi Database 
+        - Menjalankan migrasi ke database
+            -> npx sequelize-cli db:migrate
+
+* Tampilkan hasil dari query dan penjelasan sebagai berikut :
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id;
+
+    -> Menampilkan seluruh data dari table heroes beserta type dari hero tsb
+
+    ======================================================================================================
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE type_tb.name = 'Strength';
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE type_tb.name = 'HP';
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE type_tb.name = 'Agility';
+    
+    -> Menampilkan seluruh data heroes berdasarkan type tertentu 
+
+    ======================================================================================================
+
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE heroes_tb.name = 'Holy Knight Escanor';
+    
+    - SELECT heroes_tb.id, heroes_tb.name AS hero_name, type_tb.name AS type_name, heroes_tb.photo
+      FROM heroes_tb JOIN type_tb ON heroes_tb.type_id = type_tb.id WHERE heroes_tb.id = 1;
+
+    -> Menampilkan spesifik data heroes dengan type nya
+
+

@@ -1,0 +1,52 @@
+* Question : 
+    2.	Buatlah sebuah function sederhana untuk menghitung potongan harga, biaya yang harus dibayar, dan total kembalian 
+        pada sistem voucher DumbWays Klontong , ketentuan : 
+
+        Voucher : 
+
+        a.	DumbWaysJos, potongan 21,1%, minimal uang belanja 50000, Maksimal diskon 20000
+
+        b.	DumbWaysMantap, potongan 30%, minimal uang belanja 80000, maksimal diskon 40000
+        
+        Clue : maka jika function dijalankan:
+
+        hitungVoucher(DumbWaysJos, 100000)
+        
+        output :     
+        -	Uang yang harus dibayar : 80000
+        -	Diskon : 20000
+        -	Kembalian  : 20000
+
+* Answer : 
+    2. Berikut adalah implementasi function JavaScript untuk menghitung potongan harga, biaya yang harus dibayar, dan total kembalian 
+    berdasarkan ketentuan voucher DumbWays Klontong
+
+        - Inisialisasi Variabel : 
+            Inisialisasi variabel diskon, uangYangHarusDibayar, dan kembalian.
+
+        - Pemeriksaan Jenis Voucher :
+            Periksa apakah voucher yang digunakan adalah "DumbWaysJos".
+
+        - Perhitungan Diskon untuk DumbWaysJos :
+            Jika total belanja memenuhi syarat minimal, hitung diskon 21,1%. Jika diskon melebihi 20000, batasi diskon ke 20000.
+
+        - Perhitungan Diskon untuk DumbWaysMantap :
+            Jika voucher yang digunakan adalah "DumbWaysMantap" dan total belanja memenuhi syarat minimal, hitung diskon 30%. Jika diskon melebihi 40000, batasi diskon ke 40000.
+        
+        - Hitung Uang yang Harus Dibayar :
+            Hitung uang yang harus dibayar setelah diskon.
+        
+        - Periksa Kecukupan Uang yang Dibayar :
+            Jika uang yang dibayar cukup, hitung kembalian. Jika tidak cukup, kembalikan pesan kesalahan.
+        
+        - Kembalikan Hasil Perhitungan :
+            Kembalikan hasil perhitungan dalam bentuk objek yang berisi uang yang harus dibayar, diskon, dan kembalian.
+
+        - Menjalankan function dengan contoh penggunaan dan cetak hasilnya ke konsol.
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+* Question :
+    3. Diketahui sebuah data array sebagai berikut:
+	    [2, 24, 32, 22, 31, 100, 56, 21, 99, 7, 5, 37, 97, 25, 13, 11]
+    
+    Buatlah sebuah function yang bertugas untuk menyusun array berikut menggunakan recursive bubble sort. Fungsi tersebut akan mengembalikan 3 output, yaitu array yang sudah tersusun dan bilangan yang ganjil dan genap.
+        
+        Contoh:
+        Input: sortArray([2, 24, 32, 22, 31])
+
+    Output:
+    Array: 2, 22, 24, 31, 32
+    Ganjil: 31
+    Genap: 2, 22, 24, 32 
+
+* Answer : 
+    3. Berikut sebuah implementasi dari fungsi sortArray yang menggunakan recursive bubble sort untuk mengurutkan array dan mengembalikan tiga output
+       array yang sudah tersusun. Seperti bilangan ganjil, dan bilangan genap sesuai dengan output pada soal : 
+
+       A. Fungsi recursiveBubbleSort :
+            - Fungsi ini menggunakan bubble sort secara rekursif untuk mengurutkan array.
+            - Jika panjang array adalah 1, maka array sudah terurut.
+            - Lakukan satu pass dari bubble sort dengan membandingkan setiap elemen berpasangan dan menukarnya jika perlu.
+            - Panggil fungsi ini secara rekursif dengan panjang array yang dikurangi satu, sehingga elemen terbesar selalu berada di akhir array setelah setiap pass.
+       
+       B. Fungsi sortArray :
+            - Salin array asli untuk menghindari perubahan pada array input.
+            - Panggil recursiveBubbleSort untuk mengurutkan array yang disalin.
+            - Pisahkan elemen-elemen array yang terurut menjadi bilangan ganjil dan genap menggunakan operasi modulus.
+            - Kembalikan hasil dalam bentuk objek dengan tiga properti: sortedArray, oddNumbers, dan evenNumbers.
+
+       C. Penggunaan Fungsi :
+            - Contoh array diberikan dan fungsi sortArray dipanggil dengan array tersebut.
+            - Hasil yang diharapkan adalah array yang sudah terurut, dan dua array yang berisi bilangan ganjil dan genap.
+            - Pada hasil output, hanya elemen yang sesuai (2, 22, 24, 31, dan 32) yang ditampilkan dengan menggunakan metode filter dan find.
+
+        Kesimpulan : 
+            Fungsi ini akan mengurutkan array menggunakan recursive bubble sort dan memisahkan bilangan ganjil dan genap dengan benarr, serta mencetak hasilnya sesuai format output pada soal. 

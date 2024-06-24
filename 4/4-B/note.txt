@@ -1,0 +1,24 @@
+* Tahapan-tahapan pembuatan DB menggunakan PostgreSQL dengan Sequelize : 
+    
+    1. Melakukan Install Sequelize dan dependencies  
+       -> npm install sequelize pg pg-hstore
+    
+    2. Setup Sequelize
+        - Inisialisasi Sequelize
+            -> npx sequelize-cli init
+
+        - Ini akan membuat beberapa folder di proyek : config, models, migrations, dan seeders.
+
+    3.  Konfigurasi database 
+        - Buka config/config.json dan atur konfigurasi untuk database dengan yang sesuai
+
+    4. Buat Model dan Migrasi
+        - Membuat model untuk type_tb
+            -> npx sequelize-cli model:generate --name Type --attributes name:string
+        
+        - Membuat model untuk heroes_tb
+            -> npx sequelize-cli model:generate --name Heroes --attributes name:string,type_id:integer,photo:string
+
+    5. Migrasi Database 
+        - Menjalankan migrasi ke database
+            -> npx sequelize-cli db:migrate

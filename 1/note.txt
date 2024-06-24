@@ -1,0 +1,25 @@
+* Question : 
+    1. Buatlah menggunakan javascript function untuk mencetak pattern segitiga siku-siku terbalik dengan ketentuan sebagai berikut:
+            a.	Input user berupa panjang alas dan tinggi segitiga (alas dan tingginya sama) dengan ketentuan :
+                0 < Alas/Tinggi < 10
+            b.	Segitiga dibentuk dengan deret angka prima yang terus berlanjut meskipun barisnya berganti.
+
+        Input:
+        drawSikuSiku(7):
+
+        Output:
+            
+        2						
+        3	5					
+        7	11	13				
+        17	19	23	29			
+        31	37	41	43	47		
+        53	59	61	67	71	73	
+        79	83	89	97	101	103	107
+
+* Answer : 
+    1. Untuk membuat fungsi JavaScript yang mencetak pola segitiga siku-siku terbalik menggunakan deret angka prima, dengan sebagai berikut :
+        
+        a. Melakukan pencarian sebuah deret angka prima yang cukup untuk mengisi segitiga dengan tinggi tertentu.
+        
+        b. Melakukan cetak angka prima tersebut dalam bentuk segitiga siku-siku dengan terbalik. 
