@@ -50,7 +50,6 @@ function sortArray(arr) {
     };
 }
 
-
 // Ini mengambil hanya elemen yang relevan untuk output yang akan di cetak 
 let relevantSortedArray = result.sortedArray.filter(num => num === 2 || num === 22 || num === 24 || num === 31 || num === 32);
 let relevantOddNumber = result.oddNumbers.find(num => num === 31);

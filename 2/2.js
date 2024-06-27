@@ -30,8 +30,8 @@ function hitungVoucher(voucher, totalBelanja, uangDibayar) {
     // Hitung uang yang harus dibayar setelah diskon
     uangYangHarusDibayar = totalBelanja - diskon;
 
-    // Periksa apakah uang yang dibayar cukup
-    if (uangDibayar >= uangYangHarusDibayar) {
+     // Periksa apakah uang yang dibayar cukup
+     if (uangDibayar >= uangYangHarusDibayar) {
         // Hitung kembalian jika uang yang dibayar lebih dari atau sama dengan uang yang harus dibayar
         kembalian = uangDibayar - uangYangHarusDibayar;
     } else {
